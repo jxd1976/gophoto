@@ -3,11 +3,7 @@ package main
 import (
 	"crypto/md5"
 	"fmt"
-<<<<<<< HEAD
 	"github.com/jxd1976/gophoto/util"
-=======
-	"github.com/jxd1976/photo/util"
->>>>>>> 32095ba4a46ff6b8661a9fe2e79658041c766577
 	"github.com/rwcarlsen/goexif/exif"
 	"github.com/rwcarlsen/goexif/mknote"
 	"io"
@@ -40,9 +36,9 @@ func main() {
 
 		files, _ := WalkDir(srcdir, filetype)
 		//fmt.Println(files)
+
 		t := time.Now()
 		outfile := util.GetCurrPath() + "log_" + strings.Replace(t.String()[:19], ":", "_", 3) + ".txt"
-
 		fout, err := os.Create(outfile)
 		if err != nil {
 			fmt.Println(outfile, err)
